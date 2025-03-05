@@ -10,7 +10,7 @@ setGeneric("WriteH5AD", function(object, file, assay = NULL, overwrite = TRUE) s
 #'
 #' @import hdf5r methods
 #' @importFrom Matrix t
-WriteH5ADHelper <- function(object, assay, root, global = FALSE) {
+WriteH5ADHelper <- function(object, assay, root, global = TRUE) {
   mod_object <- Seurat::GetAssay(object, assay)
 
   # .obs
